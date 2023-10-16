@@ -1,0 +1,45 @@
+.login-bg{
+    padding-top:10%;
+    padding-bottom:10%;
+    background-image: linear-gradient(#a5d8dc, #ecc8c2);
+}
+
+.login-design{
+    border-radius: 35px;
+    width: 80%;
+    height: 90%;
+    margin-left: 10%;
+    margin-right:10%;
+    background-color: white;
+}
+
+
+#login {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+h1,p{
+    color:#545555;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type=email],input[type=password]{
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.btn{
+    color: #545555;
+}
+
+button.btn.btn-primary {
+    color:#545555;
+    background-color: #a5d8dc;
+    border-color: #a5d8dc;
+    border-radius: 15px;
+    font-size: large;
+    font-weight: bold;
+}
+
