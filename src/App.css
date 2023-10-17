@@ -109,8 +109,30 @@
   margin: 20px;
 }
 
+
 /* .UBlogs{
   padding-left: 25%;
   padding-right: 25%;
 } */
+
+.blog-design{
+  background-color: #f8f9fa;
+}
+
+.about-us h2,p{
+  color:#545555;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5%;
+}
+
+.about-us .button{
+  color:#545555;
+  background-color: #a5d8dc;
+  border-color: #a5d8dc;
+  border-radius: 20px;
+  font-size: large;
+  font-weight: bold;
+  width: 90%;
+  margin-left: 5%;
+}
 

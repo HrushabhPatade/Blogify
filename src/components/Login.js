@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import { faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGoogle, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { Link, useNavigate } from "react-router-dom";
 import {
-  getAuth,
-  signInWithEmailAndPassword,
   GithubAuthProvider,
   GoogleAuthProvider,
+  getAuth,
+  signInWithEmailAndPassword,
   signInWithPopup,
 } from "firebase/auth";
-import db from "./FbConfig";
 import { ref, set } from "firebase/database";
-import logo from "../assets/1024.png";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import logo from "../assets/blogifylogo.png";
+import "../style/login.css";
+import db from "./FbConfig";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -72,13 +73,14 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="login-bg">
+    <div className="login-design">
       <div className="text-center">
-        <img
+        <br/>
+        <img className="login-logo"
           src={logo}
-          className="rounded"
           alt="..."
-          style={{ height: "200px" }}
+          style={{ height: "60px" }}
         />
       </div>
       <form id="login">
@@ -106,7 +108,7 @@ const Login = () => {
 
         <div className="row mb-4">
           <div className="col">
-            <Link to={"/fp"}>Forgot password?</Link>
+            <Link to={"/fp" }  className="link-class">Forgot password?</Link>
           </div>
         </div>
 
@@ -121,7 +123,7 @@ const Login = () => {
 
         <div className="text-center">
           <p>
-            Not a member? <Link to={"/reg"}>Register</Link>
+            Not a member? <Link to={"/reg"}  className="link-class">Register</Link>
           </p>
           <p>or sign up with:</p>
 
@@ -140,8 +142,9 @@ const Login = () => {
           >
             <FontAwesomeIcon icon={faGithub} />
           </button>
-        </div>
+        </div>< br/>
       </form>
+    </div>
     </div>
   );
 };

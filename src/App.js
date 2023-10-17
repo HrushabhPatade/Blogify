@@ -1,13 +1,13 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
-import Blogs from './components/Blogs';
-import {BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Create from './components/Create';
-import Login from './components/Login';
-import Reg from './components/Reg';
+import AboutUs from './components/AboutUs';
 import AddBlogs from './components/AddBlogs';
-import ReadPage from './components/ReadPage';
+import Blogs from './components/Blogs';
+import Create from './components/Create';
 import ForgotPassword from './components/ForgotPwd';
+import Login from './components/Login';
+import ReadPage from './components/ReadPage';
+import Reg from './components/Reg';
 import UReadPage from './components/UReadPage';
 
 function App() {
@@ -24,7 +24,8 @@ function App() {
         <Route path="/read/:title" element={<ReadPage />} />
         <Route path="/uread" element={<UReadPage/>}/>
         <Route path='/fp' element={<ForgotPassword/>}/>
-      </Routes>  
+        <Route path='/about' element={<AboutUs/>}/>
+      </Routes>
       </BrowserRouter>
     </div>
   );

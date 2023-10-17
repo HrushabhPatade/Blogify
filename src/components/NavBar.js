@@ -1,10 +1,12 @@
-import { signOut, getAuth } from "firebase/auth";
-import React, { useState, useEffect } from "react";
+import { getAuth, signOut } from "firebase/auth";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../assets/1024.png";
+import logo from "../assets/blogifylogo.png";
+import "../style/navbar.css";
 
 const NavBar = () => {
   const nav = useNavigate();
+
   const Logout = (event) => {
     event.preventDefault();
     const auth = getAuth();
@@ -14,26 +16,14 @@ const NavBar = () => {
       .catch((err) => console.log(err));
   };
 
-  // const handleLinkClick = () => {
-  //   // Perform any necessary logic before the page refresh
-
-  //   window.location.href = "/blogs"; // Redirect to the target page with full page refresh
-  // };
   return (
-    <div>
+    <div className="navbar-design">
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <Link to={"/blogs"} className="navbar-brand" >
-            {/* Blogify */}
-            <div className="text-center">
-        <img
-          src={logo}
-          className="rounded"
-          alt="..."
-          style={{ height: "52px", width:"52px" }}
-        />
-      </div>
+        <div className="container">
+          <Link to={"/blogs"} className="navbar-brand">
+            <img src={logo} alt="Blogify Logo" className="rounded" />
           </Link>
+
           <button
             className="navbar-toggler"
             type="button"
@@ -45,25 +35,26 @@ const NavBar = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <Link
-                  to={"/cr"}
-                  className="nav-link active"
-                  aria-current="page"
-                  href="#"
-                >
-                  Create
+                <Link to={"/blogs"} className="nav-link active" aria-current="page">
+                  Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link
-                  to={"/ab"}
-                  className="nav-link active"
-                  aria-current="page"
-                  href="#"
-                >
+                <Link to={"/about"} className="nav-link active" aria-current="page">
+                  About Us
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to={"/cr"} className="nav-link active" aria-current="page">
+                  Create a new Blog
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to={"/ab"} className="nav-link active" aria-current="page">
                   Added Blogs
                 </Link>
               </li>
